@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<body style="background-color:#D4CFF6;">
+</body>
+
+<center><h1 style="color:Brown; font-family:Copperplate;"> MY FIRST ACTIVITY </h1></center>
+
+
+<div ng-app="">
+
+<p>Name: <input type="text" ng-model="name"></p>
+<p>You wrote: {{ name }}</p>
+
+<p>Enter you Address: <input type="text" ng-model="add"></p>
+<p>You wrote: {{ add }}</p>
+
+<p>Enter your SHS High School: <input type="text" ng-model="shs"></p>
+<p>You wrote: {{ shs }}</p>
+
+<p>Enter your Course: <input type="text" ng-model="course"></p>
+<p>You wrote: {{ course }}</p>
+
+<div ng-app="" ng-init="names=[
+{name:'Jasmine',city:'Manila' , description: 'Very Thoughtful.'},
+{name:'April',city:'Taguig' , description: 'A one call away friend.'},
+{name:'Coleen',city:'Quezon' , description: 'Prone to emotional breakdown.'},
+{name:'Kenneth',city:'Mandaluyong' , description: 'A friend you can count on.'},
+{name:'Kate',city:'San Juan' , description: 'Moody.'},
+{name:'Cyndy',city:'Cavite' , description: 'Master of advice.'},
+{name:'Edelyn',city:'Laguna' , description: 'Comfortable to be with.'},
+{name:'Nova',city:'Makati' , description: 'The Most Quiet of them all.'},
+{name:'Marvy',city:'Albay' , description: 'Strong Person.'},
+{name:'Marky',city:'Pasay' , description: 'The Guilt Tripper LOL JK.'}]">
+
+<h2><p style="font-family:courier;">MEET MY FRIENDS:</p></h2>
+<ol>
+  <li ng-repeat="x in names">
+  {{ 'Name: ' + x.name + ', ' + 'City: ' + x.city + ', ' + 'Description: ' + x.description }}</li>
+</ol>
+
+</div>
+
+</body>
+</html>
